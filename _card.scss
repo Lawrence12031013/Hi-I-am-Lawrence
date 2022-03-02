@@ -1,0 +1,171 @@
+.card-wrap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.connect {
+  text-decoration: none;
+  color: black;
+}
+
+.card-light {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  border-radius: 5px;
+  font-family: sans-serif;
+  transform: skewX(-5deg);
+  transition: all 0.8s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px rgba(10, 10, 10, 0.5);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover .photo {
+    filter: brightness(1);
+    animation: move 3s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+.photo-wrap {
+  width: auto;
+  height: 200px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 600px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.3);
+  transition: all 0.8s 0.1s ease;
+}
+
+.photo_1 {
+  background-image: url("./photo/portfolio-2-01.jpg");
+}
+
+.photo_2 {
+  background-image: url("./photo/portfolio-01.jpg");
+}
+
+.photo_3 {
+  background-image: url(./photo/portfolio-3-02.jpg);
+}
+
+.photo_4 {
+  background-image: url(./photo/portfolio-4-03.jpg);
+}
+
+.text {
+  text-align: center;
+  margin: 2rem 2rem;
+  font-size: 1.5rem;
+  color: var(--color-font);
+
+  & p {
+    text-align: start;
+  }
+}
+.text :not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0, -300px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 25vh;
+    width: 100%;
+
+    .card-light {
+      transform: skewX(0);
+      width: 45%;
+      margin: 1rem;
+      padding: 0.5rem;
+      border: 0.5px solid rgba(182, 175, 175, 0.685);
+      box-shadow: none;
+      background-color: #fff;
+    }
+
+    .photo {
+      filter: brightness(1);
+    }
+
+    .photo_3 {
+      height: 100%;
+    }
+
+    .photo_4 {
+      height: 100%;
+    }
+  }
+
+  .text {
+    & P {
+      font-size: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 30vh;
+
+    .card-light {
+      transform: skewX(0);
+      width: 100%;
+      height: auto;
+      margin: 1rem;
+      padding: 0.5rem;
+      border: 0.5px solid rgba(182, 175, 175, 0.685);
+      box-shadow: none;
+      background-color: #fff;
+    }
+
+    .photo {
+      filter: brightness(1);
+    }
+
+    .photo_3 {
+      height: 100%;
+    }
+
+    .photo_4 {
+      height: 100%;
+    }
+  }
+}

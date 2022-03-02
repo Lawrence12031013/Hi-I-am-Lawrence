@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 62.5%;
+  background-color: #e7e9e9;
+}
+
+footer {
+  font-size: 1.75rem;
+  color: var(--color-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 992px) {
+  * {
+    font-size: 2rem;
+  }
+
+  footer {
+    top: 20vh;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  * {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    top: 25vh;
+  }
+}
+
+@import "./header";
+@import "./color";
+@import "./slide";
+@import "./nav";
+@import "./card";
+@import "./sidebar";
+@import "./form";
+@import "./portfolio";

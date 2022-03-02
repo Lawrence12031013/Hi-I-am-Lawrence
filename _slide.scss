@@ -1,0 +1,80 @@
+.slideshow {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  margin: 15rem 0 7.5rem 0;
+  background-image: url(./photo/pexels-photo-169573.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .logo {
+    width: 14.3%;
+    filter: brightness(0.1);
+
+    & img {
+      width: 80%;
+    }
+
+    &:nth-child(1),
+    &:nth-child(7) {
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:nth-child(4) {
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .fade-out {
+    opacity: 0;
+    width: 0;
+  }
+
+  .light {
+    filter: brightness(1.1);
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slideshow {
+    position: relative;
+    top: 25vh;
+    height: 25vh;
+    overflow: hidden;
+    padding: 0 1rem;
+    background-position: bottom;
+
+    .logo {
+      width: 50%;
+
+      & img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slideshow {
+    position: relative;
+    top: 35vh;
+    height: 20vh;
+    overflow: hidden;
+    padding: 0 1rem;
+    background-position: bottom;
+
+    .logo {
+      width: 50%;
+
+      & img {
+        width: 80%;
+      }
+    }
+  }
+}
